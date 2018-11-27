@@ -5,11 +5,11 @@ import java.util.Arrays;
 
 public class InputProcessor {
     public static String processInput(String[] args) {
-        ArrayList<String> argsArrList;
+        ArrayList<String> argsArrayList;
 
-        argsArrList = splitArgs(args);
-        System.out.println(argsArrList);
-        return (argsArrList.toString());
+        argsArrayList = splitArgs(args);
+
+        return (argsArrayList.toString());
     }
 
     private static ArrayList<String> splitArgs(String[] args) {
@@ -27,8 +27,10 @@ public class InputProcessor {
             result = new ArrayList<>(Arrays.asList(args));
         }
 
-        if (result.size() != 12) {
-            throw new IncorrectNumberOfArguments(
+        if (result.size() != 12 ||
+                !playerNameIsValid(result.get(0)) ||
+                !playerNameIsValid(result.get(6))) {
+            throw new IllegalArgumentException(
                     "Please enter two players and their hands.\n" +
                     "Example: Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH\n" +
                     "This can be done as one string, " +
@@ -38,5 +40,13 @@ public class InputProcessor {
         }
 
         return (result);
+    }
+
+    private static boolean playerNameIsValid(String playerName) {
+        if (playerName.charAt(playerName.length() - 1) == ':') {
+            return (true);
+        } else {
+            return (false);
+        }
     }
 }

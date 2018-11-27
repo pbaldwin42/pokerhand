@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="959438c3-49e4-41dc-a75e-18ec76eaa161" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/IncorrectNumberOfArguments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/InputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/InputProcessor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,20 +19,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncorrectNumberOfArguments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/IncorrectNumberOfArguments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-              <folding>
-                <element signature="e#189#190#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -39,8 +28,8 @@
       <file leaf-file-name="InputProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/InputProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+            <state relative-caret-position="24">
+              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,8 +54,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/InvalidArguments.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/IncorrectNumberOfArguments.java" />
-        <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/InputProcessor.java" />
+        <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" />
       </list>
     </option>
   </component>
@@ -202,9 +191,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/IncorrectNumberOfArguments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
+            <element signature="e#159#160#0" expanded="true" />
             <element signature="e#189#190#0" expanded="true" />
           </folding>
         </state>
@@ -212,15 +202,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="119">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/InputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        <state relative-caret-position="24">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
