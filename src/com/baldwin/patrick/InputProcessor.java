@@ -2,17 +2,10 @@ package com.baldwin.patrick;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class InputProcessor {
-    public static String processInput(String[] args) {
-        ArrayList<String> argsArrayList;
-
-        argsArrayList = splitArgs(args);
-
-        return (argsArrayList.toString());
-    }
-
-    private static ArrayList<String> splitArgs(String[] args) {
+    public static List<String> splitAndValidateArgs(String[] args) {
         ArrayList<String> result;
 
         result = new ArrayList<>();
@@ -27,26 +20,19 @@ public class InputProcessor {
             result = new ArrayList<>(Arrays.asList(args));
         }
 
-        if (result.size() != 12 ||
-                !playerNameIsValid(result.get(0)) ||
+        if (result.size() != 12) {
+            throw new IllegalArgumentException("Invalid number of items");
+        }
+        if (!playerNameIsValid(result.get(0)) ||
                 !playerNameIsValid(result.get(6))) {
-            throw new IllegalArgumentException(
-                    "Please enter two players and their hands.\n" +
-                    "Example: Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH\n" +
-                    "This can be done as one string, " +
-                    "two strings (one per player and hand) " +
-                    "or individual arguments."
-            );
+            throw new IllegalArgumentException("Player names must be followed by a colon.");
         }
 
         return (result);
     }
 
     private static boolean playerNameIsValid(String playerName) {
-        if (playerName.charAt(playerName.length() - 1) == ':') {
-            return (true);
-        } else {
-            return (false);
-        }
+        return (playerName.length() > 1 &&
+                playerName.charAt(playerName.length() - 1) == ':');
     }
 }
