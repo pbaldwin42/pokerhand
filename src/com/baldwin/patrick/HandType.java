@@ -14,7 +14,7 @@ public enum HandType {
     private String  stringValue;
     private int     strength;
 
-    private HandType(String stringValue, int strength) {
+    HandType(String stringValue, int strength) {
         this.stringValue = stringValue.intern();
         this.strength    = strength;
     }

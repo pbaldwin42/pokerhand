@@ -8,7 +8,7 @@ public enum Suit {
 
     private String stringValue;
 
-    private Suit(String stringValue) {
+    Suit(String stringValue) {
         this.stringValue = stringValue.intern();
     }
 

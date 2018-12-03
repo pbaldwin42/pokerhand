@@ -15,8 +15,6 @@ public class Main {
             argsList = InputProcessor.splitAndValidateArgs(args);
             player1 = new Player(argsList.subList(0, 6));
             player2 = new Player(argsList.subList(6, argsList.size()));
-            System.out.println(player1);
-            System.out.println(player2);
             handComparisonResult = player1.getHand().compareTo(player2.getHand());
             if (handComparisonResult == 0) {
                 System.out.println("Tie");
@@ -24,9 +22,8 @@ public class Main {
                 winner = handComparisonResult > 0 ? player1 : player2;
 
                 System.out.println(winner.getName() + " wins. - with " +
-                        winner.getHand().getHandType() + ": " + winner.getHand().getCardDetails()); // not done
+                        winner.getHand().getHandType() + ": " + winner.getHand().getCardDetails());
             }
-            System.out.println(handComparisonResult);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             System.out.println("Please enter two players and their hands.");
