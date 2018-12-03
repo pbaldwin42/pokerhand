@@ -14,7 +14,7 @@ public class HandHelper {
     public static boolean isFullHouse(Hashtable<Rank, Integer> rankCount,
                                       List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 3 &&
-                rankCount.get(cards.get(0).getRank()) == 2);
+                rankCount.get(cards.get(4).getRank()) == 2);
     }
     public static boolean isFlush(List<Card> cards) {
         Suit flushSuit = cards.get(0).getSuit();
@@ -74,13 +74,15 @@ public class HandHelper {
     }
     public static String determineCardDetails(HandType handType, List<Card> cards) {
         if (handType == HandType.TWOPAIR || handType == HandType.FULLHOUSE) {
-            return ("" + cards.get(0).getRank() + "s over " + cards.get(3) + "s");
+            return ("" + cards.get(0).getRank() + "s over " + cards.get(3).getRank() + "s");
         } else if (handType == HandType.FLUSH) {
             return ("" + cards.get(0).getRank() + " high");
         } else if (handType == HandType.STRAIGHT || handType == HandType.STRAIGHTFLUSH) {
             return ("" + cards.get(cards.size() - 1).getRank() + " to " + cards.get(0).getRank());
-        } else {
+        } else if (handType == HandType.HIGH) {
             return ("" + cards.get(0).getRank());
+        } else {
+            return ("" + cards.get(0).getRank() + "s");
         }
     }
 }
