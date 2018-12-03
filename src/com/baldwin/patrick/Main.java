@@ -22,7 +22,8 @@ public class Main {
                 winner = handComparisonResult > 0 ? player1 : player2;
 
                 System.out.println(winner.getName() + " wins. - with " +
-                        winner.getHand().getHandType() + ": " + winner.getHand().getCardDetails());
+                        winner.getHand().getHandType() + ": " +
+                        winner.getHand().getCardDetails());
             }
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
