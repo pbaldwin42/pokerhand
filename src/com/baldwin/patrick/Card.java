@@ -18,54 +18,54 @@ public class Card {
         }
         storeRank(cardString.charAt(0));
         storeSuite(cardString.charAt(1));
-        if (Card.cardsCreated.contains(("" + this.rank + this.suit).intern())) {
+        if (Card.cardsCreated.contains("" + rank + suit)) {
             throw new IllegalArgumentException("\"" + cardString + "\"" +
                     " was entered multiple times. One of the players must be cheating.");
         } else {
-            Card.cardsCreated.add(("" + this.rank + this.suit).intern());
+            Card.cardsCreated.add(("" + rank + suit));
         }
     }
 
     private void storeRank(char rankChar) {
         switch (rankChar) {
             case '2':
-                this.rank = Rank.TWO;
+                rank = Rank.TWO;
                 break;
             case '3':
-                this.rank = Rank.THREE;
+                rank = Rank.THREE;
                 break;
             case '4':
-                this.rank = Rank.FOUR;
+                rank = Rank.FOUR;
                 break;
             case '5':
-                this.rank = Rank.FIVE;
+                rank = Rank.FIVE;
                 break;
             case '6':
-                this.rank = Rank.SIX;
+                rank = Rank.SIX;
                 break;
             case '7':
-                this.rank = Rank.SEVEN;
+                rank = Rank.SEVEN;
                 break;
             case '8':
-                this.rank = Rank.EIGHT;
+                rank = Rank.EIGHT;
                 break;
             case '9':
-                this.rank = Rank.NINE;
+                rank = Rank.NINE;
                 break;
             case 'T':
-                this.rank = Rank.TEN;
+                rank = Rank.TEN;
                 break;
             case 'J':
-                this.rank = Rank.JACK;
+                rank = Rank.JACK;
                 break;
             case 'Q':
-                this.rank = Rank.QUEEN;
+                rank = Rank.QUEEN;
                 break;
             case 'K':
-                this.rank = Rank.KING;
+                rank = Rank.KING;
                 break;
             case 'A':
-                this.rank = Rank.ACE;
+                rank = Rank.ACE;
                 break;
             default:
                 throw new IllegalArgumentException("\"" + rankChar + "\"" +
@@ -76,16 +76,16 @@ public class Card {
     private void storeSuite(char suitChar) {
         switch (suitChar) {
             case 'S':
-                this.suit = Suit.SPADES;
+                suit = Suit.SPADES;
                 break;
             case 'C':
-                this.suit = Suit.CLUBS;
+                suit = Suit.CLUBS;
                 break;
             case 'H':
-                this.suit = Suit.HEARTS;
+                suit = Suit.HEARTS;
                 break;
             case 'D':
-                this.suit = Suit.DIAMONDS;
+                suit = Suit.DIAMONDS;
                 break;
             default:
                 throw new IllegalArgumentException("\"" + suitChar + "\"" +
@@ -96,7 +96,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return ((rank.toString() + " of " + suit.toString()).intern());
+        return ((rank.toString() + " of " + suit.toString()));
     }
 
     public Rank getRank() {

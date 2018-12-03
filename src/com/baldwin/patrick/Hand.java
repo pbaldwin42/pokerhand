@@ -9,9 +9,9 @@ public class Hand implements Comparable<Hand> {
     private String                   cardDetails;
 
     public Hand(List<String> cardStrings) {
-        this.cards = new ArrayList<>();
+        cards = new ArrayList<>();
         for (String cardString: cardStrings) {
-            this.cards.add(new Card(cardString));
+            cards.add(new Card(cardString));
         }
         storeRankData();
         determineHandType();
@@ -35,12 +35,12 @@ public class Hand implements Comparable<Hand> {
     }
 
     private void storeRankData() {
-        this.rankCount = new Hashtable<>();
+        rankCount = new Hashtable<>();
         for (Rank rank: Rank.values()) {
             rankCount.put(rank, 0);
         }
-        for (Card card: this.cards) {
-            this.rankCount.put(card.getRank(), this.rankCount.get(card.getRank()) + 1);
+        for (Card card: cards) {
+            rankCount.put(card.getRank(), rankCount.get(card.getRank()) + 1);
         }
         cards.sort(new Comparator<Card>() { // figure out lambda logic
             @Override
@@ -52,27 +52,27 @@ public class Hand implements Comparable<Hand> {
                 }
             }
         });
-        Collections.reverse(this.cards);
+        Collections.reverse(cards);
     }
     private void determineHandType() {
         if (HandHelper.isStraightFlush(cards)) {
-            this.handType = HandType.STRAIGHTFLUSH;
+            handType = HandType.STRAIGHTFLUSH;
         } else if (HandHelper.isFourOfAKind(rankCount, cards)) {
-            this.handType = HandType.FOUROFAKIND;
+            handType = HandType.FOUROFAKIND;
         } else if (HandHelper.isFullHouse(rankCount, cards)) {
-            this.handType = HandType.FULLHOUSE;
+            handType = HandType.FULLHOUSE;
         } else if (HandHelper.isFlush(cards)) {
-            this.handType = HandType.FLUSH;
+            handType = HandType.FLUSH;
         } else if (HandHelper.isStraight(cards)) {
-            this.handType = HandType.STRAIGHT;
+            handType = HandType.STRAIGHT;
         } else if (HandHelper.isThreeOfAKind(rankCount, cards)) {
-            this.handType = HandType.THREEOFAKIND;
+            handType = HandType.THREEOFAKIND;
         } else if (HandHelper.isTwoPair(rankCount, cards)) {
-            this.handType = HandType.TWOPAIR;
+            handType = HandType.TWOPAIR;
         } else if (HandHelper.isPair(rankCount, cards)) {
-            this.handType = HandType.PAIR;
+            handType = HandType.PAIR;
         } else {
-            this.handType = HandType.HIGH;
+            handType = HandType.HIGH;
         }
     }
 
@@ -85,8 +85,12 @@ public class Hand implements Comparable<Hand> {
         if (this.handType.getStrength() == hand2.handType.getStrength()) {
             int i;
 
+            this.handType  = HandType.HIGH;
+            hand2.handType = HandType.HIGH;
             for (i = 0; i < cards.size(); i += 1) {
                 if (this.cards.get(i) != hand2.getCards().get(i)) {
+                    this.cardDetails  = "" + this.cards.get(i).getRank();
+                    hand2.cardDetails = "" + hand2.cards.get(i).getRank();
                     break;
                 }
             }

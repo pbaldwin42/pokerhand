@@ -19,7 +19,7 @@ public enum Rank {
     private int     rankValue;
 
     private Rank(String stringValue, int rankValue) {
-        this.stringValue = stringValue.intern();
+        this.stringValue = stringValue;
         this.rankValue   = rankValue;
     }
 

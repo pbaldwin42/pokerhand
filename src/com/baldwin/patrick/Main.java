@@ -8,7 +8,7 @@ public class Main {
         Player       player1;
         Player       player2;
         Player       winner;
-        int          winnerInt;
+        int          handComparisonResult;
         List<String> argsList;
 
         try {
@@ -17,16 +17,16 @@ public class Main {
             player2 = new Player(argsList.subList(6, argsList.size()));
             System.out.println(player1);
             System.out.println(player2);
-            winnerInt = player1.getHand().compareTo(player2.getHand());
-            if (winnerInt == 0) {
+            handComparisonResult = player1.getHand().compareTo(player2.getHand());
+            if (handComparisonResult == 0) {
                 System.out.println("Tie");
             } else {
-                winner = winnerInt > 0 ? player1 : player2;
+                winner = handComparisonResult > 0 ? player1 : player2;
 
                 System.out.println(winner.getName() + " wins. - with " +
                         winner.getHand().getHandType() + ": " + winner.getHand().getCardDetails()); // not done
             }
-            System.out.println(winnerInt);
+            System.out.println(handComparisonResult);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             System.out.println("Please enter two players and their hands.");

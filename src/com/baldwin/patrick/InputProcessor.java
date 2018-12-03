@@ -10,16 +10,13 @@ public class InputProcessor {
 
         result = new ArrayList<>();
 
-        if (args.length == 1) {
-            result = new ArrayList<>(Arrays.asList(args[0].split("\\s+")));
-        } else if (args.length == 2) {
-            for (String arg: args) {
-                result.addAll(new ArrayList<>(Arrays.asList(arg.split("\\s+"))));
-            }
-        } else if (args.length == 12) {
+        if (args.length == 12) {
             result = new ArrayList<>(Arrays.asList(args));
+        } else {
+            for (String arg: args) {
+                result.addAll(new ArrayList<>(Arrays.asList(arg.trim().split("\\s+"))));
+            }
         }
-
         if (result.size() != 12) {
             throw new IllegalArgumentException("Invalid number of items");
         }

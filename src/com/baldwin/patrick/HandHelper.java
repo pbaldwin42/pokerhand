@@ -32,14 +32,9 @@ public class HandHelper {
         isStraight = true;
         aceIsHigh = true;
         while (true) {
-            for (int i = 0; i < cards.size() - 1; i = +1) {
-                Rank rank1;
-                Rank rank2;
-
-                rank1 = cards.get(i).getRank();
-                rank2 = cards.get(i + 1).getRank();
-                if (Math.abs(rank1.getRankValue() - rank2.getRankValue()) != 1
-                        && Math.abs(rank1.getRankValue() - rank2.getRankValue()) != 12) {
+            for (int i = 0; i < cards.size() - 1; i += 1) {
+                if (cardRankDifference(cards.get(i), cards.get(i + 1)) != 1
+                        && cardRankDifference(cards.get(i), cards.get(i + 1)) != 12) {
                     isStraight = false;
                     break;
                 }
@@ -53,6 +48,7 @@ public class HandHelper {
                 cards.add(cards.get(0));
                 cards.remove(0);
                 aceIsHigh = false;
+                isStraight = true;
             } else {
                 break;
             }
@@ -72,14 +68,19 @@ public class HandHelper {
                                  List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 2);
     }
+    private static int cardRankDifference(Card card1, Card card2) {
+        return (Math.max(card1.getRank().getRankValue(), card2.getRank().getRankValue()) -
+                Math.min(card1.getRank().getRankValue(), card2.getRank().getRankValue()));
+    }
     public static String determineCardDetails(HandType handType, List<Card> cards) {
-        if (handType == HandType.HIGH || handType == HandType.PAIR ||
-                handType == HandType.THREEOFAKIND || handType == HandType.FOUROFAKIND) {
-            return ("" + cards.get(0).getRank()); // DO THIS SOMETIME
+        if (handType == HandType.TWOPAIR || handType == HandType.FULLHOUSE) {
+            return ("" + cards.get(0).getRank() + "s over " + cards.get(3) + "s");
+        } else if (handType == HandType.FLUSH) {
+            return ("" + cards.get(0).getRank() + " high");
+        } else if (handType == HandType.STRAIGHT || handType == HandType.STRAIGHTFLUSH) {
+            return ("" + cards.get(cards.size() - 1).getRank() + " to " + cards.get(0).getRank());
+        } else {
+            return ("" + cards.get(0).getRank());
         }
-        if (handType == HandType.TWOPAIR) {
-            return ("" + cards.get(0).getRank() + "s over " + cards.get(2) + "s"); // check if pairs get put in correct sorting order
-        }
-        return (""); // USED FOR COMPILING
     }
 }
