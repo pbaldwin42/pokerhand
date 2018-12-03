@@ -98,4 +98,12 @@ public class Card {
     public String toString() {
         return ((rank.toString() + " of " + suit.toString()).intern());
     }
+
+    public Rank getRank() {
+        return rank;
+    }
+
+    public Suit getSuit() {
+        return suit;
+    }
 }
