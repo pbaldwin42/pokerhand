@@ -27,7 +27,8 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             System.out.println("Please enter two players and their hands.");
-            System.out.println("Example: Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH");
+            System.out.println("Example:");
+            System.out.println("Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH");
         }
     }
 }

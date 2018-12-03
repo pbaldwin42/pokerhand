@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="959438c3-49e4-41dc-a75e-18ec76eaa161" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/HandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/HandType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/Rank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/Suit.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="99" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
+            <state relative-caret-position="374">
+              <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -30,8 +26,8 @@
       <file leaf-file-name="Hand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Hand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1151">
-              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
               <folding>
                 <element signature="e#510#511#0" expanded="true" />
                 <element signature="e#538#539#0" expanded="true" />
@@ -117,7 +113,7 @@
       <file leaf-file-name="HandHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/HandHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-117">
+            <state relative-caret-position="1054">
               <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -157,8 +153,8 @@
       <find>sub</find>
       <find>j</find>
       <find>this</find>
-      <find>println</find>
       <find>intern</find>
+      <find>println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,10 +173,10 @@
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Card.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/HandHelper.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Hand.java" />
-        <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/HandType.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Suit.java" />
         <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Rank.java" />
+        <option value="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" />
       </list>
     </option>
   </component>
@@ -241,7 +237,6 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.baldwin.patrick.Main" />
       <module name="pokerhand" />
-      <option name="PROGRAM_PARAMETERS" value="Black: 2H 2D 2S 2C KD White: AH 6H AC AD AS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -389,18 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/HandHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/HandType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -421,13 +404,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="99" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -458,10 +434,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/HandHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/Hand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1151">
-          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
           <folding>
             <element signature="e#510#511#0" expanded="true" />
             <element signature="e#538#539#0" expanded="true" />
