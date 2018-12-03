@@ -72,7 +72,7 @@ public class HandHelper {
         return (Math.max(card1.getRank().getRankValue(), card2.getRank().getRankValue()) -
                 Math.min(card1.getRank().getRankValue(), card2.getRank().getRankValue()));
     }
-    public static String determineCardDetails(HandType handType, List<Card> cards) {
+    public static String determineHandDetails(HandType handType, List<Card> cards) {
         if (handType == HandType.TWOPAIR || handType == HandType.FULLHOUSE) {
             return ("" + cards.get(0).getRank() + "s over " + cards.get(3).getRank() + "s");
         } else if (handType == HandType.FLUSH) {

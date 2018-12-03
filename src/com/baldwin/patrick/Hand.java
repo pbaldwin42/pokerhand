@@ -6,7 +6,7 @@ public class Hand implements Comparable<Hand> {
     private ArrayList<Card>          cards;
     private Hashtable<Rank, Integer> rankCount;
     private HandType                 handType;
-    private String                   cardDetails;
+    private String                   handDetails;
 
     public Hand(List<String> cardStrings) {
         cards = new ArrayList<>();
@@ -15,7 +15,7 @@ public class Hand implements Comparable<Hand> {
         }
         storeRankData();
         determineHandType();
-        cardDetails = HandHelper.determineCardDetails(handType, cards);
+        handDetails = HandHelper.determineHandDetails(handType, cards);
     }
 
     public ArrayList<Card> getCards() {
@@ -27,11 +27,11 @@ public class Hand implements Comparable<Hand> {
     }
 
     public String getCardDetails() {
-        return cardDetails;
+        return handDetails;
     }
 
-    public void setCardDetails(String cardDetails) {
-        this.cardDetails = cardDetails;
+    public void setHandDetails(String cardDetails) {
+        this.handDetails = cardDetails;
     }
 
     private void storeRankData() {
@@ -91,8 +91,8 @@ public class Hand implements Comparable<Hand> {
                 }
             }
             if (this.handType == HandType.HIGH) {
-                this.cardDetails  = "" + this.cards.get(i).getRank();
-                hand2.cardDetails = "" + hand2.cards.get(i).getRank();
+                this.handDetails  = "" + this.cards.get(i).getRank();
+                hand2.handDetails = "" + hand2.cards.get(i).getRank();
             }
             return (this.cards.get(i).getRank().getRankValue() -
                     hand2.getCards().get(i).getRank().getRankValue());
