@@ -42,7 +42,7 @@ public class Hand implements Comparable<Hand> {
         for (Card card: cards) {
             rankCount.put(card.getRank(), rankCount.get(card.getRank()) + 1);
         }
-        cards.sort(new Comparator<Card>() { // figure out lambda logic
+        cards.sort(new Comparator<Card>() {
             @Override
             public int compare(Card o1, Card o2) {
                 if (rankCount.get(o1.getRank()).equals(rankCount.get(o2.getRank()))) {
