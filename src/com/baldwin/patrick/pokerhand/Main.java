@@ -1,4 +1,4 @@
-package com.baldwin.patrick;
+package com.baldwin.patrick.pokerhand;
 
 import java.util.List;
 

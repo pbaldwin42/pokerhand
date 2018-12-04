@@ -1,4 +1,4 @@
-package com.baldwin.patrick;
+package com.baldwin.patrick.pokerhand.hand_logic;
 
 public enum HandType {
     HIGH("high card", 1, 1),

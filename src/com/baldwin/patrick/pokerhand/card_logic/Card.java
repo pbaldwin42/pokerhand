@@ -1,4 +1,4 @@
-package com.baldwin.patrick;
+package com.baldwin.patrick.pokerhand.card_logic;
 
 import java.util.HashSet;
 import java.util.Set;

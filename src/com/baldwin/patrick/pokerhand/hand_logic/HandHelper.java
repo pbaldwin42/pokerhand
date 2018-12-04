@@ -1,4 +1,8 @@
-package com.baldwin.patrick;
+package com.baldwin.patrick.pokerhand.hand_logic;
+
+import com.baldwin.patrick.pokerhand.card_logic.Card;
+import com.baldwin.patrick.pokerhand.card_logic.Rank;
+import com.baldwin.patrick.pokerhand.card_logic.Suit;
 
 import java.util.Hashtable;
 import java.util.List;

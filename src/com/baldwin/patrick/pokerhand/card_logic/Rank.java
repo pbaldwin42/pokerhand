@@ -1,4 +1,4 @@
-package com.baldwin.patrick;
+package com.baldwin.patrick.pokerhand.card_logic;
 
 public enum Rank {
     TWO("2", 2),
