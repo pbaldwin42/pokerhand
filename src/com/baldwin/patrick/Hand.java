@@ -85,16 +85,21 @@ public class Hand implements Comparable<Hand> {
         if (this.handType.getStrength() == hand2.handType.getStrength()) {
             int i;
 
-            for (i = 0; i < cards.size(); i += 1) {
-                if (this.cards.get(i).getRank() != hand2.getCards().get(i).getRank()) {
+            for (i = 0; i < this.cards.size(); i += 1) {
+                if (i < this.getHandType().getCardsRequired()) {
+                    if (this.cards.get(i).getRank() != hand2.getCards().get(i).getRank()) {
+                        break;
+                    }
+                } else if (this.cards.get(i).getRank() != hand2.getCards().get(i).getRank()){
+                    this.handType  = HandType.HIGH;
+                    hand2.handType = HandType.HIGH;
+                    this.handDetails  = "" + this.cards.get(i).getRank();
+                    hand2.handDetails = "" + hand2.cards.get(i).getRank();
                     break;
                 }
             }
-            if (this.handType == HandType.HIGH) {
-                this.handDetails  = "" + this.cards.get(i).getRank();
-                hand2.handDetails = "" + hand2.cards.get(i).getRank();
-            }
-            return (this.cards.get(i).getRank().getRankValue() -
+            return (i == this.cards.size() ? 0 :
+                    this.cards.get(i).getRank().getRankValue() -
                     hand2.getCards().get(i).getRank().getRankValue());
         } else {
             return (this.handType.getStrength() - hand2.handType.getStrength());

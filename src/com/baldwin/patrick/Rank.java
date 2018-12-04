@@ -24,11 +24,11 @@ public enum Rank {
     }
 
     public int getRankValue() {
-        return (this.rankValue);
+        return (rankValue);
     }
 
     @Override
     public String toString() {
-        return (this.stringValue);
+        return (stringValue);
     }
 }

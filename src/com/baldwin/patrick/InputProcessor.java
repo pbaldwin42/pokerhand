@@ -22,7 +22,8 @@ public class InputProcessor {
         }
         if (!playerNameIsValid(result.get(0)) ||
                 !playerNameIsValid(result.get(6))) {
-            throw new IllegalArgumentException("Player names must be followed by a colon.");
+            throw new IllegalArgumentException("Player names must be followed by a colon, " +
+                    "and each player must have exactly five cards.");
         }
 
         return (result);

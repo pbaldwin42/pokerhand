@@ -18,10 +18,4 @@ public class Player {
     public String getName() {
         return name;
     }
-
-    @Override
-    public String toString() {
-        return ("player's name: " + this.name + "\n" +
-            "player's hand: " + this.hand);
-    }
 }

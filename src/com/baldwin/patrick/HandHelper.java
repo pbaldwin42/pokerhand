@@ -3,20 +3,20 @@ package com.baldwin.patrick;
 import java.util.Hashtable;
 import java.util.List;
 
-public class HandHelper {
-    public static boolean isStraightFlush(List<Card> cards) {
+public interface HandHelper {
+    static boolean isStraightFlush(List<Card> cards) {
         return (isFlush(cards) && isStraight(cards));
     }
-    public static boolean isFourOfAKind(Hashtable<Rank, Integer> rankCount,
+    static boolean isFourOfAKind(Hashtable<Rank, Integer> rankCount,
                                         List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 4);
     }
-    public static boolean isFullHouse(Hashtable<Rank, Integer> rankCount,
+    static boolean isFullHouse(Hashtable<Rank, Integer> rankCount,
                                       List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 3 &&
                 rankCount.get(cards.get(4).getRank()) == 2);
     }
-    public static boolean isFlush(List<Card> cards) {
+    static boolean isFlush(List<Card> cards) {
         Suit flushSuit = cards.get(0).getSuit();
         for (Card card: cards) {
             if (card.getSuit() != flushSuit) {
@@ -25,7 +25,7 @@ public class HandHelper {
         }
         return (true);
     }
-    public static boolean isStraight(List<Card> cards) {
+    static boolean isStraight(List<Card> cards) {
         boolean isStraight;
         boolean aceIsHigh;
 
@@ -33,8 +33,8 @@ public class HandHelper {
         aceIsHigh = true;
         while (true) {
             for (int i = 0; i < cards.size() - 1; i += 1) {
-                if (cardRankDifference(cards.get(i), cards.get(i + 1)) != 1
-                        && cardRankDifference(cards.get(i), cards.get(i + 1)) != 12) {
+                if (cardRankDifference(cards.get(i), cards.get(i + 1)) != 1 &&
+                        cardRankDifference(cards.get(i), cards.get(i + 1)) != 12) {
                     isStraight = false;
                     break;
                 }
@@ -55,16 +55,16 @@ public class HandHelper {
         }
         return (isStraight);
     }
-    public static boolean isThreeOfAKind(Hashtable<Rank, Integer> rankCount,
+    static boolean isThreeOfAKind(Hashtable<Rank, Integer> rankCount,
                                          List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 3);
     }
-    public static boolean isTwoPair(Hashtable<Rank, Integer> rankCount,
+    static boolean isTwoPair(Hashtable<Rank, Integer> rankCount,
                                     List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 2 &&
                 rankCount.get(cards.get(2).getRank()) == 2);
     }
-    public static boolean isPair(Hashtable<Rank, Integer> rankCount,
+    static boolean isPair(Hashtable<Rank, Integer> rankCount,
                                  List<Card> cards) {
         return (rankCount.get(cards.get(0).getRank()) == 2);
     }
@@ -72,7 +72,7 @@ public class HandHelper {
         return (Math.max(card1.getRank().getRankValue(), card2.getRank().getRankValue()) -
                 Math.min(card1.getRank().getRankValue(), card2.getRank().getRankValue()));
     }
-    public static String determineHandDetails(HandType handType, List<Card> cards) {
+    static String determineHandDetails(HandType handType, List<Card> cards) {
         if (handType == HandType.TWOPAIR || handType == HandType.FULLHOUSE) {
             return ("" + cards.get(0).getRank() + "s over " + cards.get(3).getRank() + "s");
         } else if (handType == HandType.FLUSH) {

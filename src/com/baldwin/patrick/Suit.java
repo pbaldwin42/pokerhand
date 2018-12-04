@@ -14,6 +14,6 @@ public enum Suit {
 
     @Override
     public String toString() {
-        return (this.stringValue);
+        return (stringValue);
     }
 }
