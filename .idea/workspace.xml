@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="959438c3-49e4-41dc-a75e-18ec76eaa161" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/card_logic/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Hand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/hand_logic/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/HandHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/HandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/hand_logic/HandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/HandType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/HandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/hand_logic/HandType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/InputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/InputProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/card_logic/Rank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/baldwin/patrick/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/card_logic/Suit.java" afterDir="false" />
-    </list>
+    <list default="true" id="959438c3-49e4-41dc-a75e-18ec76eaa161" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +24,8 @@
       <file leaf-file-name="Hand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/hand_logic/Hand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="306">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#510#511#0" expanded="true" />
@@ -280,7 +267,6 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.baldwin.patrick.pokerhand.Main" />
       <module name="pokerhand" />
-      <option name="PROGRAM_PARAMETERS" value="Black: AH KH QH JH 9D White: KS QS JS TS 8C" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -306,6 +292,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="327" y="19" width="1158" height="843" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="DB Execution Console" />
@@ -326,10 +313,10 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31043956" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31043956" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1900175" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1900175" />
       <window_info id="Learn" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info id="Favorites" side_tool="true" />
@@ -506,8 +493,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/baldwin/patrick/pokerhand/hand_logic/Hand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="306">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#510#511#0" expanded="true" />
